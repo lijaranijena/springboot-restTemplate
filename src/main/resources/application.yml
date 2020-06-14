@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+---
+spring.profiles: e0
+
+app:
+  external:
+    auth-service:
+      url: https://allianz-auth-srv.cfapps.io/token/generate
+      x-auth-role: ADMIN
+      x-auth-user: ADMIN
+    person-service:
+      add-url: https://allianz-person-srv.cfapps.io/person/add
+      search-url: https://allianz-person-srv.cfapps.io/person/search
